@@ -1,0 +1,105 @@
+{
+    "Outputs":  {
+                    "DashboardName":  {
+                                          "Value":  "order-monitoring-evidence-dashboard"
+                                      },
+                    "SourceStack":  {
+                                        "Value":  "order-orchestration-evidence"
+                                    }
+                },
+    "Description":  "Workshop 5.6 monitoring for order-orchestration-evidence",
+    "AWSTemplateFormatVersion":  "2010-09-09",
+    "Resources":  {
+                      "OrderDashboard":  {
+                                             "Properties":  {
+                                                                "DashboardName":  "order-monitoring-evidence-dashboard",
+                                                                "DashboardBody":  "{\"widgets\":[{\"width\":12,\"properties\":{\"legend\":{\"position\":\"bottom\"},\"region\":\"ap-southeast-1\",\"stat\":\"Maximum\",\"metrics\":[[\"AWS/SQS\",\"ApproximateNumberOfMessagesVisible\",\"QueueName\",\"order-orchestration-evidence-OrdersQueue-Q4yad2S16mVq\",{\"label\":\"Source queue\"}],[\"AWS/SQS\",\"ApproximateNumberOfMessagesVisible\",\"QueueName\",\"order-orchestration-evidence-OrdersDLQ-Kbv9OO2FitbU\",{\"label\":\"DLQ\"}]],\"period\":60,\"title\":\"SQS: visible messages\",\"view\":\"timeSeries\"},\"y\":0,\"type\":\"metric\",\"x\":0,\"height\":6},{\"width\":12,\"properties\":{\"legend\":{\"position\":\"bottom\"},\"region\":\"ap-southeast-1\",\"stat\":\"Maximum\",\"metrics\":[[\"AWS/SQS\",\"ApproximateAgeOfOldestMessage\",\"QueueName\",\"order-orchestration-evidence-OrdersQueue-Q4yad2S16mVq\"]],\"period\":60,\"title\":\"SQS: oldest source message (seconds)\",\"view\":\"timeSeries\"},\"y\":0,\"type\":\"metric\",\"x\":12,\"height\":6},{\"width\":12,\"properties\":{\"legend\":{\"position\":\"bottom\"},\"region\":\"ap-southeast-1\",\"stat\":\"Sum\",\"metrics\":[[\"AWS/States\",\"ExecutionsStarted\",\"StateMachineArn\",\"arn:aws:states:ap-southeast-1:397303793104:stateMachine:OrderStateMachine-vjnt41lqqHly\"],[\"AWS/States\",\"ExecutionsSucceeded\",\"StateMachineArn\",\"arn:aws:states:ap-southeast-1:397303793104:stateMachine:OrderStateMachine-vjnt41lqqHly\"],[\"AWS/States\",\"ExecutionsFailed\",\"StateMachineArn\",\"arn:aws:states:ap-southeast-1:397303793104:stateMachine:OrderStateMachine-vjnt41lqqHly\"]],\"period\":60,\"title\":\"Step Functions: executions\",\"view\":\"timeSeries\"},\"y\":6,\"type\":\"metric\",\"x\":0,\"height\":6},{\"width\":12,\"properties\":{\"legend\":{\"position\":\"bottom\"},\"region\":\"ap-southeast-1\",\"stat\":\"Sum\",\"metrics\":[[\"AWS/Lambda\",\"Invocations\",\"FunctionName\",\"order-orchestration-evidence-ProcessOrderFn-A3d416bkFPjD\"],[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"order-orchestration-evidence-ProcessOrderFn-A3d416bkFPjD\"]],\"period\":60,\"title\":\"Lambda: invocations and errors\",\"view\":\"timeSeries\"},\"y\":6,\"type\":\"metric\",\"x\":12,\"height\":6}]}"
+                                                            },
+                                             "Type":  "AWS::CloudWatch::Dashboard"
+                                         },
+                      "SfnFailedAlarm":  {
+                                             "Properties":  {
+                                                                "AlarmName":  "order-monitoring-evidence-sfn-failed",
+                                                                "ComparisonOperator":  "GreaterThanThreshold",
+                                                                "OKActions":  [
+                                                                                  "arn:aws:sns:ap-southeast-1:397303793104:order-orchestration-evidence-OrderTopic-1gXMLibGVdC0"
+                                                                              ],
+                                                                "AlarmActions":  [
+                                                                                     "arn:aws:sns:ap-southeast-1:397303793104:order-orchestration-evidence-OrderTopic-1gXMLibGVdC0"
+                                                                                 ],
+                                                                "Dimensions":  [
+                                                                                   {
+                                                                                       "Value":  "arn:aws:states:ap-southeast-1:397303793104:stateMachine:OrderStateMachine-vjnt41lqqHly",
+                                                                                       "Name":  "StateMachineArn"
+                                                                                   }
+                                                                               ],
+                                                                "EvaluationPeriods":  1,
+                                                                "Namespace":  "AWS/States",
+                                                                "AlarmDescription":  "Workshop 5.6; source stack: order-orchestration-evidence",
+                                                                "TreatMissingData":  "notBreaching",
+                                                                "MetricName":  "ExecutionsFailed",
+                                                                "Statistic":  "Sum",
+                                                                "Threshold":  0,
+                                                                "DatapointsToAlarm":  1,
+                                                                "Period":  60
+                                                            },
+                                             "Type":  "AWS::CloudWatch::Alarm"
+                                         },
+                      "DlqAlarm":  {
+                                       "Properties":  {
+                                                          "AlarmName":  "order-monitoring-evidence-dlq",
+                                                          "ComparisonOperator":  "GreaterThanThreshold",
+                                                          "OKActions":  [
+                                                                            "arn:aws:sns:ap-southeast-1:397303793104:order-orchestration-evidence-OrderTopic-1gXMLibGVdC0"
+                                                                        ],
+                                                          "AlarmActions":  [
+                                                                               "arn:aws:sns:ap-southeast-1:397303793104:order-orchestration-evidence-OrderTopic-1gXMLibGVdC0"
+                                                                           ],
+                                                          "Dimensions":  [
+                                                                             {
+                                                                                 "Value":  "order-orchestration-evidence-OrdersDLQ-Kbv9OO2FitbU",
+                                                                                 "Name":  "QueueName"
+                                                                             }
+                                                                         ],
+                                                          "EvaluationPeriods":  1,
+                                                          "Namespace":  "AWS/SQS",
+                                                          "AlarmDescription":  "Workshop 5.6; source stack: order-orchestration-evidence",
+                                                          "TreatMissingData":  "notBreaching",
+                                                          "MetricName":  "ApproximateNumberOfMessagesVisible",
+                                                          "Statistic":  "Maximum",
+                                                          "Threshold":  0,
+                                                          "DatapointsToAlarm":  1,
+                                                          "Period":  60
+                                                      },
+                                       "Type":  "AWS::CloudWatch::Alarm"
+                                   },
+                      "LambdaErrorAlarm":  {
+                                               "Properties":  {
+                                                                  "AlarmName":  "order-monitoring-evidence-lambda-errors",
+                                                                  "ComparisonOperator":  "GreaterThanThreshold",
+                                                                  "OKActions":  [
+                                                                                    "arn:aws:sns:ap-southeast-1:397303793104:order-orchestration-evidence-OrderTopic-1gXMLibGVdC0"
+                                                                                ],
+                                                                  "AlarmActions":  [
+                                                                                       "arn:aws:sns:ap-southeast-1:397303793104:order-orchestration-evidence-OrderTopic-1gXMLibGVdC0"
+                                                                                   ],
+                                                                  "Dimensions":  [
+                                                                                     {
+                                                                                         "Value":  "order-orchestration-evidence-ProcessOrderFn-A3d416bkFPjD",
+                                                                                         "Name":  "FunctionName"
+                                                                                     }
+                                                                                 ],
+                                                                  "EvaluationPeriods":  1,
+                                                                  "Namespace":  "AWS/Lambda",
+                                                                  "AlarmDescription":  "Workshop 5.6; source stack: order-orchestration-evidence",
+                                                                  "TreatMissingData":  "notBreaching",
+                                                                  "MetricName":  "Errors",
+                                                                  "Statistic":  "Sum",
+                                                                  "Threshold":  0,
+                                                                  "DatapointsToAlarm":  1,
+                                                                  "Period":  60
+                                                              },
+                                               "Type":  "AWS::CloudWatch::Alarm"
+                                           }
+                  }
+}

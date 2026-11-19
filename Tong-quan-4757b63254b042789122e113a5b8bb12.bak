@@ -1,0 +1,46 @@
+---
+title : "Workshop"
+date : "2026-10-03"
+weight : 5
+chapter : true
+pre : " <b> 5. </b> "
+---
+
+<!-- workshop-detail:v1:begin -->
+## Tổng quan workshop
+
+Workshop xây dựng hệ thống xử lý đơn hàng bất đồng bộ trên AWS và dùng website Mộc làm sản phẩm minh họa. Người dùng chọn sản phẩm, nhập email và gửi đơn; các dịch vụ phía sau tiếp nhận, xử lý, gửi thông báo và lưu trạng thái để người dùng theo dõi.
+
+Bài toán không chỉ là gửi được một email. Hệ thống cần phân biệt yêu cầu đã tiếp nhận với đơn đã hoàn tất, xử lý tình huống thông điệp được giao lại và giúp người vận hành tìm được nguyên nhân khi có lỗi. Vì vậy, bài thực hành kết hợp hàng đợi, cơ sở dữ liệu, điều phối và giám sát.
+
+### Những nội dung chính
+
+| Nhóm nội dung | Vai trò trong hệ thống |
+|---|---|
+| SQS và DLQ | Lưu yêu cầu chờ xử lý; giữ thông điệp không xử lý được theo chính sách chuyển lỗi |
+| Lambda và DynamoDB | Xử lý yêu cầu, kiểm soát trùng và lưu trạng thái đơn |
+| Step Functions | Điều phối các bước và thực hiện Retry/Catch theo cấu hình |
+| SES và SNS | Gửi xác nhận cho người đặt hàng và thông báo cho quản trị viên |
+| CloudWatch | Theo dõi log, metric, dashboard và alarm |
+
+### Sản phẩm và kết quả cần kiểm chứng
+
+Website Mộc là cửa hàng thử nghiệm, chưa có thanh toán, kiểm kho hoặc giao hàng thực tế. Một đơn thử cần được đối chiếu bằng cùng mã đơn trên giao diện, DynamoDB, execution Step Functions và email. Trạng thái DONE cho biết quy trình ứng dụng hoàn tất; việc email có vào Inbox cần kiểm tra riêng.
+
+Các phần thực hành đi từ chuẩn bị môi trường đến kiểm thử thành công, gửi trùng, gây lỗi có kiểm soát và dọn dẹp. Khi ghi báo cáo, phân biệt kết quả quan sát được với mục tiêu dự kiến; không dùng một ảnh triển khai thành công để thay cho bằng chứng cả luồng đã chạy thành công.
+
+**Ảnh minh họa tùy chọn:** mở trang sản phẩm Mộc và chụp giao diện. Không cần gửi thêm đơn chỉ để chụp ảnh tổng quan. Ghi chú đây là giao diện minh họa; kết quả xử lý được trình bày ở phần thực nghiệm.
+<!-- workshop-detail:v1:end -->
+
+<!-- workshop-split:v1 -->
+
+## Lộ trình thực hành
+
+- [5.1 Giới thiệu và kiến trúc](5.1-Introduction/)
+- [5.2 Chuẩn bị (IAM, region, công cụ)](5.2-Prerequisite/)
+- [5.3 Hàng đợi và DLQ](5.3-sqs-dlq/)
+- [5.4 Chống xử lý trùng](5.4-Idempotency/)
+- [5.5 Điều phối và thông báo](5.5-Orchestration/)
+- [5.6 Giám sát](5.6-Monitoring/)
+- [5.7 Thực nghiệm lỗi và tải](5.7-Experiment/)
+- [5.8 Clean up](5.8-Clean-Up/)

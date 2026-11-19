@@ -1,0 +1,5 @@
+<!-- workshop-proof:v1 -->
+<figure class="workshop-proof">
+  <img src="{{ printf "images/5-Workshop/5.2-Prerequisite/%s" (.Get "file") | relURL }}" alt="{{ .Get "alt" }}" loading="lazy" style="max-width:100%;height:auto">
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

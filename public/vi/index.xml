@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>BÁO CÁO THỰC TẬP</title>
+		<link>http://localhost:1313/vi/</link>
+		<description>Recent content on BÁO CÁO THỰC TẬP</description>
+		<generator>Hugo</generator>
+		<language>vi</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/vi/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Worklog Tuần 7</title>
+				<link>http://localhost:1313/vi/1-worklog/1.7-week7-worklog/1.7-week7_index/</link>
+				<pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/vi/1-worklog/1.7-week7-worklog/1.7-week7_index/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Thời gian thực tập:&lt;/strong&gt; 21/09/2026 - 26/09/2026&lt;/p&gt;&#xA;&lt;h3 id=&#34;mục-tiêu-tuần-7&#34;&gt;Mục tiêu tuần 7:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Theo dõi được một đơn hàng qua các thành phần xử lý.&lt;/li&gt;&#xA;&lt;li&gt;Xây dựng log, metric và cảnh báo hỗ trợ phát hiện sự cố.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;các-công-việc-đã-thực-hiện-trong-tuần&#34;&gt;Các công việc đã thực hiện trong tuần:&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Ngày&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Công việc&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Tài liệu tham khảo&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;21/09/2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Xác định thông tin cần ghi nhận tại mỗi bước: orderId, eventId, correlationId, trạng thái và thời gian xử lý.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Ghi chú thiết kế quan sát hệ thống&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;22/09/2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Bổ sung structured log và truyền correlationId qua API, sự kiện và consumer; hạn chế ghi dữ liệu nhạy cảm vào log.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html&#34;&gt;Amazon CloudWatch Logs&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;23/09/2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Viết truy vấn Logs Insights để tra cứu đường đi của một đơn hàng và tổng hợp các nhóm lỗi.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html&#34;&gt;CloudWatch Logs Insights&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;25/09/2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Tạo dashboard theo dõi Lambda errors, duration, throttles, số thông điệp tồn đọng và tuổi thông điệp lâu nhất.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html&#34;&gt;Amazon CloudWatch&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;26/09/2026&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Cấu hình cảnh báo thử nghiệm cho lỗi xử lý và hàng đợi lỗi; tạo sự cố có kiểm soát để kiểm tra cảnh báo.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a href=&#34;https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html&#34;&gt;CloudWatch alarms&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;kết-quả-đạt-được-tuần-7&#34;&gt;Kết quả đạt được tuần 7:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Thiết lập cách liên kết log giữa các thành phần theo mã đơn hàng và correlationId.&lt;/li&gt;&#xA;&lt;li&gt;Xây dựng dashboard và cảnh báo ban đầu để hỗ trợ phát hiện lỗi và tình trạng tồn đọng.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

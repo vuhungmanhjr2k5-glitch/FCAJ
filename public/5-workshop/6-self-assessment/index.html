@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.169.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Self-Assessment :: Create a new AWS account.</title>
+
+    
+    <link href="/css/nucleus.css?1794389444" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1794389444" rel="stylesheet">
+    <link href="/css/hybrid.css?1794389444" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1794389444" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1794389444" rel="stylesheet">
+    <link href="/css/auto-complete.css?1794389444" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1794389444" rel="stylesheet">
+    <link href="/css/theme.css?1794389444" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1794389444" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1794389444" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1794389444"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/5-workshop/6-self-assessment/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1794389444"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1794389444"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1794389444"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/" title="Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/">
+          <b> 1. </b> Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.1-week1-worklog/" title="Week 1 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.1-week1-worklog/">
+           <b> 1.1. </b> Week 1 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.2-week2-worklog/" title="Week 2 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.2-week2-worklog/">
+           <b> 1.2. </b> Week 2 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.3-week3-worklog/" title="Week 3 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.3-week3-worklog/">
+           <b> 1.3. </b> Week 3 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.4-week4-worklog/" title="Week 4 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.4-week4-worklog/">
+           <b> 1.4. </b> Week 4 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.5-week5-worklog/" title="Week 5 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.5-week5-worklog/">
+           <b> 1.5. </b> Week 5 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.6-week6-worklog/" title="Week 6 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.6-week6-worklog/">
+           <b> 1.6. </b> Week 6 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1-worklog/1.7-week7-worklog/1.7-week_index/" title="Week 7 Worklog" class="dd-item ">
+        <a href="/1-worklog/1.7-week7-worklog/1.7-week_index/">
+         <b> 1.7. </b> Week 7 Worklog
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.8-week8-worklog/" title="Week 8 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.8-week8-worklog/">
+           <b> 1.8. </b> Week 8 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.9-week9-worklog/" title="Week 9 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.9-week9-worklog/">
+           <b> 1.9. </b> Week 9 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1-worklog/1.10-week10-worklog/1.10-week10_index/" title="Week 10 Worklog" class="dd-item ">
+        <a href="/1-worklog/1.10-week10-worklog/1.10-week10_index/">
+         <b> 1.10. </b> Week 10 Worklog
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1-worklog/1.11-week11-worklog/1.11-week11_index/" title="Week 11 Worklog" class="dd-item ">
+        <a href="/1-worklog/1.11-week11-worklog/1.11-week11_index/">
+         <b> 1.11. </b> Week 11 Worklog
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1.12-week12-worklog/" title="Week 12 Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1.12-week12-worklog/">
+           <b> 1.12. </b> Week 12 Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/" title="Workshop" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/5-workshop/">
+           <b> 5. </b> Workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/6-self-assessment/" title="Self-Assessment" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/5-workshop/6-self-assessment/">
+           <b> 6 </b> Self-Assessment
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.1-introduction/" title="Introduction and Architecture" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.1-introduction/">
+           <b> 5.1 </b> Introduction and Architecture
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.2-prerequisite/" title="Preparation (IAM, Region, Tools)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.2-prerequisite/">
+           <b> 5.2 </b> Preparation (IAM, Region, Tools)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.3-sqs-dlq/" title="Queues and DLQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.3-sqs-dlq/">
+           <b> 5.3 </b> Queues and DLQ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.4-idempotency/" title="Preventing Duplicate Processing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.4-idempotency/">
+           <b> 5.4 </b> Preventing Duplicate Processing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.5-orchestration/" title="Orchestration and Notifications" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.5-orchestration/">
+           <b> 5.5 </b> Orchestration and Notifications
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.6-monitoring/" title="Monitoring" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.6-monitoring/">
+           <b> 5.6 </b> Monitoring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.7-experiment/" title="Fault and Load Experiments" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.7-experiment/">
+           <b> 5.7 </b> Fault and Load Experiments
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.8-clean-up/" title="Clean up" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.8-clean-up/">
+           <b> 5.8 </b> Clean up
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://localhost:1313/5-workshop/6-self-assessment/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="http://localhost:1313/vi/5-workshop/6-self-assessment/">Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>26-11-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Create a new AWS account.</a> > <a href='/5-workshop/'>Workshop</a> > Self-Assessment
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-overview-of-the-internship">1. Overview of the Internship</a></li>
+    <li><a href="#2-results-and-skills-gained">2. Results and Skills Gained</a></li>
+    <li><a href="#3-self-assessment-table">3. Self-Assessment Table</a></li>
+    <li><a href="#4-detailed-comments-on-each-criterion">4. Detailed Comments on Each Criterion</a></li>
+    <li><a href="#5-difficulties-and-lessons-learned">5. Difficulties and Lessons Learned</a></li>
+    <li><a href="#6-improvement-plan">6. Improvement Plan</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Self-Assessment
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="1-overview-of-the-internship">1. Overview of the Internship</h2>
+<p>From <strong>08/08/2026</strong> to <strong>31/10/2026</strong>, I interned at <strong>Amazon Web Services Vietnam Company Limited</strong> under the <strong>First Cloud AI Journey (FCAJ)</strong> program. The program ran for 12 weeks, and my path moved from foundations to project practice:</p>
+<ul>
+<li><strong>Weeks 1 - 3:</strong> Getting started with AWS, creating and securing an account, managing identities and access with IAM, and controlling cost with AWS Budgets.</li>
+<li><strong>Weeks 4 - 6:</strong> Deploying Amazon EC2, configuring Security Groups, backing up with EBS Snapshots, connecting Amazon RDS, learning Auto Scaling and serverless, and deploying AWS Lambda with API Gateway.</li>
+<li><strong>Weeks 7 - 9:</strong> Learning containers, monitoring with metrics, logs, and alarms, AWS storage services, cost optimization, and configuring an automated backup plan.</li>
+<li><strong>Weeks 10 - 12:</strong> Studying migration and advanced networking, developing the <strong>Real-time Serverless Game Platform</strong> group project, finishing the report, and publishing the worklog website with Hugo, GitHub, and Netlify.</li>
+</ul>
+<p>Besides the hands-on labs, I published <strong>3 blogs</strong> about AWS solutions and joined <strong>3 events</strong> (the GenAI-powered App-DB Modernization Workshop, a Meet Up, and FCAJ Community Day) to broaden my practical perspective.</p>
+<h2 id="2-results-and-skills-gained">2. Results and Skills Gained</h2>
+<p><strong>Technical</strong></p>
+<ul>
+<li>Understood the core AWS service groups: compute, storage, database, networking, security, and monitoring.</li>
+<li>Learned to apply the principle of least privilege and why the Root User should not be used for daily work.</li>
+<li>Practiced the deployment flow from servers and databases to serverless and container architectures.</li>
+<li>Learned how cost tracking, infrastructure monitoring, backup, and recovery keep a system safe to operate.</li>
+</ul>
+<p><strong>Soft skills</strong></p>
+<ul>
+<li>Wrote reports and turned technical content into blogs and worklogs in both Vietnamese and English.</li>
+<li>Worked in a team: agreeing on scope, dividing tasks, integrating members&rsquo; work, and testing together.</li>
+<li>Managed time week by week, recorded progress regularly, and compared results with the original objectives.</li>
+</ul>
+<h2 id="3-self-assessment-table">3. Self-Assessment Table</h2>
+<table>
+	<thead>
+			<tr>
+					<th>No.</th>
+					<th>Criteria</th>
+					<th>What is assessed</th>
+					<th>Good</th>
+					<th>Fair</th>
+					<th>Average</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td><strong>Professional knowledge and skills</strong></td>
+					<td>Understanding of the field, applying it in practice, proficiency with tools, quality of output</td>
+					<td>☐</td>
+					<td>☐</td>
+					<td>✅</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td><strong>Ability to learn</strong></td>
+					<td>How quickly I pick up new knowledge and technologies</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td><strong>Proactiveness</strong></td>
+					<td>Researching and taking on work without waiting to be told</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td><strong>Sense of responsibility</strong></td>
+					<td>Delivering on schedule and keeping output quality high</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td><strong>Discipline</strong></td>
+					<td>Keeping to working hours, rules, and procedures</td>
+					<td>✅</td>
+					<td>☐</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td><strong>Progressive mindset</strong></td>
+					<td>Welcoming feedback and continuously improving</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>7</td>
+					<td><strong>Communication</strong></td>
+					<td>Explaining ideas and reporting progress clearly</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>8</td>
+					<td><strong>Teamwork</strong></td>
+					<td>Collaborating smoothly with colleagues and contributing to the group</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>9</td>
+					<td><strong>Professional conduct</strong></td>
+					<td>Showing respect to colleagues, partners, and the workplace</td>
+					<td>✅</td>
+					<td>☐</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>10</td>
+					<td><strong>Problem-solving mindset</strong></td>
+					<td>Spotting problems, proposing solutions, and approaching them creatively</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+			<tr>
+					<td>11</td>
+					<td><strong>Contribution to project/organization</strong></td>
+					<td>Work results, improvement initiatives, and recognition from the team</td>
+					<td>☐</td>
+					<td>☐</td>
+					<td>✅</td>
+			</tr>
+			<tr>
+					<td>12</td>
+					<td><strong>Overall</strong></td>
+					<td>General view of the entire internship</td>
+					<td>☐</td>
+					<td>✅</td>
+					<td>☐</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="4-detailed-comments-on-each-criterion">4. Detailed Comments on Each Criterion</h2>
+<p><strong>Professional knowledge and skills (Average).</strong> I grasped the foundational knowledge and completed the basic labs, but when a situation required deeper design or troubleshooting, I still had to look things up and ask a lot. This area needs more reinforcement.</p>
+<p><strong>Ability to learn (Fair).</strong> Each week I took on a new area and could practice it right after studying. However, I did not organize what I learned quickly enough, so I sometimes had to review the same topic several times.</p>
+<p><strong>Proactiveness (Fair).</strong> I read documentation and did labs before being asked. In the group project, I was still hesitant to suggest alternative directions when I was not fully sure.</p>
+<p><strong>Sense of responsibility (Fair).</strong> I completed tasks according to the weekly plan and cleaned up resources after every lab to avoid extra cost. Some tasks took longer than expected because my time estimates were not accurate enough.</p>
+<p><strong>Discipline (Good).</strong> I followed the work schedule, updated the worklog regularly, and delivered on time throughout all 12 weeks.</p>
+<p><strong>Progressive mindset (Fair).</strong> I was willing to accept feedback and revise my blogs and report. What I need to do better is ask for feedback early instead of waiting until the work is finished.</p>
+<p><strong>Communication (Fair).</strong> I could present progress and technical content fairly clearly. I still struggle when explaining complex issues or discussing in English.</p>
+<p><strong>Teamwork (Fair).</strong> I completed my assigned parts and supported integration and joint testing. I need to share blockers earlier so the whole team can adjust in time.</p>
+<p><strong>Professional conduct (Good).</strong> I consistently showed respect toward colleagues, mentors, and everyone I met at events.</p>
+<p><strong>Problem-solving mindset (Fair).</strong> I know how to read errors, check configurations, and consult documentation (for example when testing API Gateway or connecting EC2 to RDS). For open-ended problems, I have not yet offered multiple options to compare.</p>
+<p><strong>Contribution to project/organization (Average).</strong> I completed the parts assigned to me in the group project, but I did not bring many standout improvement ideas.</p>
+<p><strong>Overall (Fair).</strong> I consider this a valuable internship that gave me a stronger foundation in AWS and helped me build the habit of working to a plan.</p>
+<h2 id="5-difficulties-and-lessons-learned">5. Difficulties and Lessons Learned</h2>
+<ul>
+<li><strong>Large volume of knowledge:</strong> A new topic every week made it easy to spread too thin. I learned to take short notes per service and redo labs to remember them longer.</li>
+<li><strong>Controlling cloud cost:</strong> Forgetting to stop or delete resources can cause unexpected charges. This led me to set budgets, enable alerts, and clean up after every practice session.</li>
+<li><strong>Teamwork in the project:</strong> When several people develop together, agreeing on scope and responsibilities from the start reduces mismatches during integration.</li>
+<li><strong>Explaining what I learned:</strong> Writing blogs and reports forced me to truly understand a topic before presenting it, which made it an effective way to learn.</li>
+</ul>
+<h2 id="6-improvement-plan">6. Improvement Plan</h2>
+<ul>
+<li>Strengthen my technical foundation, study project-related topics in more depth, and build my self-learning ability.</li>
+<li>Sharpen my analytical thinking so I can solve problems faster and more effectively.</li>
+<li>Grow as a team player, and be bolder in contributing creative ideas.</li>
+<li>Practice reading documentation and technical communication in English.</li>
+<li>Keep building small projects on AWS and work toward AWS foundational certifications.</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/5-workshop/" title="Workshop"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/5-workshop/5.1-introduction/" title="Introduction and Architecture" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1794389444"></script>
+    <script src="/js/perfect-scrollbar.min.js?1794389444"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1794389444"></script>
+    <script src="/js/jquery.sticky.js?1794389444"></script>
+    <script src="/js/featherlight.min.js?1794389444"></script>
+    <script src="/js/highlight.pack.js?1794389444"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1794389444"></script>
+    <script src="/js/learn.js?1794389444"></script>
+    <script src="/js/hugo-learn.js?1794389444"></script>
+
+    <link href="/mermaid/mermaid.css?1794389444" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1794389444"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

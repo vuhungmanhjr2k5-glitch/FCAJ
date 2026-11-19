@@ -1,0 +1,20 @@
+<style>
+#chapter { display: block; height: auto; padding: 0; }
+#body-inner, #chapter #body-inner { box-sizing: border-box; width: 100%; max-width: 72ch; margin: 1.5rem 0 3rem; padding: 0; overflow-wrap: break-word; }
+#body-inner :is(h1,h2,h3,h4,p,li,ul,ol,th,td) { text-align: left !important; }
+#body-inner h1, #chapter #body-inner h1 { font-family: inherit; font-size: clamp(1.85rem,3vw,2.6rem); line-height: 1.18; font-weight: 600; text-transform: none; text-wrap: balance; letter-spacing: normal; border: 0; margin: 0 0 1rem; }
+#body-inner :is(h2,h3) { font-size: clamp(1.3rem,2vw,1.65rem); line-height: 1.3; margin: 1.65rem 0 .6rem; }
+#body-inner p, #body-inner li { font-size: 1rem; line-height: 1.65; }
+#body-inner p { margin: .65rem 0; }
+#body-inner :is(p,li) > code + .copy-to-clipboard { display: none; }
+#body-inner :is(ul,ol) { margin: .65rem 0; padding-inline-start: 1.5rem; }
+#body-inner li + li { margin-top: .45rem; }
+</style>
+{{ if eq (.Get 0) "index" }}{{ with .Page.Sections.ByWeight }}
+{{ $buoc := slice "Đọc sơ đồ và chọn các mốc cần đo." "Chuẩn bị quyền IAM, công cụ và email thử." "Theo dõi các lần giao lại và hàng đợi lỗi." "Thử gửi nhiều lần cùng một mã đơn." "Theo dõi bước gửi thư và nhánh xử lý lỗi." "Đọc chỉ số CloudWatch và kiểm tra cảnh báo." "Đo độ trễ và đếm số lần gửi thư." "Dọn tài nguyên và rà soát chi phí." }}
+<nav aria-label="Lộ trình thực hành"><h2>Lộ trình thực hành</h2><ul>
+{{ range . }}<li><a href="{{ .RelPermalink }}">{{ with .Params.pre }}{{ . | plainify }} {{ end }}{{ .LinkTitle }}</a>{{ if and (ge .Weight 1) (le .Weight 8) }} – {{ index $buoc (sub .Weight 1) }}{{ end }}</li>{{ end }}
+</ul></nav>
+{{ end }}{{ else }}{{ range first 1 .Page.Sections.ByWeight }}
+<p><a href="{{ .RelPermalink }}">Bắt đầu với {{ .LinkTitle }}</a></p>
+{{ end }}{{ end }}
