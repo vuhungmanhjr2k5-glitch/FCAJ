@@ -43,7 +43,7 @@ Website Mộc là cửa hàng thử nghiệm, chưa có thanh toán, kiểm kho 
 
 Các phần thực hành đi từ chuẩn bị môi trường đến kiểm thử thành công, gửi trùng, gây lỗi có kiểm soát và dọn dẹp. Khi ghi báo cáo, phân biệt kết quả quan sát được với mục tiêu dự kiến; không dùng một ảnh triển khai thành công để thay cho bằng chứng cả luồng đã chạy thành công.
 
-**Ảnh minh họa tùy chọn:** mở trang sản phẩm Mộc và chụp giao diện. Không cần gửi thêm đơn chỉ để chụp ảnh tổng quan. Ghi chú đây là giao diện minh họa; kết quả xử lý được trình bày ở phần thực nghiệm.
+![Ảnh minh họa](/images/5-Workshop/102.png)
 <!-- workshop-detail:v1:end -->
 
 <!-- workshop-split:v1 -->

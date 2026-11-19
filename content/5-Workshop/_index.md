@@ -31,7 +31,7 @@ The exercises progress from environment preparation to successful processing, du
 
 An optional product-page screenshot can introduce the demonstration. There is no need to submit another order just to capture the storefront. Present processing evidence in the experiment sections.
 <!-- workshop-detail:v1:end -->
-
+![Illustration](/images/5-Workshop/102.png)
 <!-- workshop-split:v1 -->
 
 ## Workshop contents
