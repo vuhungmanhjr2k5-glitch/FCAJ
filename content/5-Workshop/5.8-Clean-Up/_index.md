@@ -44,8 +44,6 @@ Check that the latest deployment of the stack is `DELETE_COMPLETE`. CloudFormati
 aws cloudformation list-stacks --region ap-southeast-1 --query "StackSummaries[?StackName=='order-system'].[StackName,StackStatus,CreationTime]" --output table --no-cli-pager
 ```
 
-![Delete stack result](/images/5-Workshop/5.8-Cleanup/delete-stack.png)
-
 ## 2. Delete the Lambda log groups
 
 Lambda creates its log groups automatically, so they are not deleted with the
@@ -94,7 +92,7 @@ Remove-Item Env:API_KEY, Env:CUSTOMER_EMAIL -ErrorAction SilentlyContinue
 2. Go to **Billing and Cost Management** → **Cost Explorer** and check again after 1 to 2 days for new charges from resources you removed.
 3. Keep the budget in **AWS Budgets** if you are still using this account.
 
-![Cost check](/images/5-Workshop/5.8-Cleanup/cost-check.png)
+![Cost check](/images/5-Workshop/5.8-Cleanup/costt-check.png)
 
 ## 7. Cleanup checklist
 
